@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
@@ -64,7 +64,7 @@ jobs:
 
       - name: Upload Galata Test assets
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: jupyterlab-galata-test-assets
           path: |
@@ -73,7 +73,7 @@ jobs:
 
       - name: Upload Galata Test report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: jupyterlab-galata-report
           path: |
@@ -98,12 +98,12 @@ jobs:
         python-version: ['3.10.6']
     steps:
       - name: Checkout JupyterLab
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: core
 
       - name: Checkout demo project
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: jupyterlab/jupyterlab-demo
           ref: master
@@ -172,7 +172,7 @@ jobs:
 
       - name: Upload Galata Test assets
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: jupyterlab-documentation-test-assets
           path: |
@@ -180,7 +180,7 @@ jobs:
 
       - name: Upload Galata Test report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: jupyterlab-documentation-report
           path: |
